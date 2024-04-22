@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template: [start]1fr 5fr[end] / [start]1fr 5fr [end];
+}
+
+.sidebar {
+    background-color: lightblue;
+    grid-area: start / start / end / 2;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.icon {
+    max-width: 20px;
+}
+
+.dashboard-icon {
+    max-width: 40px;
+}
+
+.dashboard-txt {
+    font-size: 2rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: grey;
+}
+
+.projects {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 16px;
+}
