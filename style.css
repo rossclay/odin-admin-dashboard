@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Roboto;
 }
 
 .container {
@@ -9,8 +13,10 @@
 }
 
 .sidebar {
-    background-color: lightblue;
+    background-color: #0e7490;
     grid-area: start / start / end / 2;
+    color: white;
+    font-weight: 400;
 }
 
 ul,
@@ -31,13 +37,58 @@ li {
 }
 
 .content {
+    background-color: #ecfeff;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: grey;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 16px;
+}
+
+.section-header {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .projects {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 16px;
+
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: white;
+    padding: 16px;
+    border-left: #fbbf24 8px solid;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(185, 185, 185);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-links {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+/* review this to set width with fr in grid rather than px */
+.announcement-container,
+.trending-container {
+    background-color: white;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(185, 185, 185);
+    padding: 16px;
+    max-width: 200px;
 }
