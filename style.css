@@ -33,6 +33,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .personal-user {
@@ -49,6 +50,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: var(--sidebar-gap);
+    gap: var(--sidebar-gap);
     width: 65%;
 }
 
@@ -134,8 +136,14 @@ li {
     list-style: none;
 }
 
-.icon {
+.icon,
+.sidebar-icon {
     max-width: 25px;
+}
+
+.sidebar-icon,
+.dashboard-icon {
+    filter: invert(98%) sepia(2%) saturate(7%) hue-rotate(264deg) brightness(114%) contrast(100%);
 }
 
 .dashboard-icon {
